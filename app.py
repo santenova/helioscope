@@ -4,7 +4,7 @@ import os
 from flask import Flask, render_template, Response,url_for
 
 # import camera driver
-if os.environ.get('CAMERA'):
+if os.environ.get('CAMERA') and 0:
     Camera = import_module('camera_' + os.environ['CAMERA']).Camera,ClippsCamera,MenuCamera
 else:
     from camera import Camera,ClippsCamera,MenuCamera

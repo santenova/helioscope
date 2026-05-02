@@ -11,6 +11,9 @@ real-time satellite imagery from space telescopes
  
 Near solar activity is detectedusing OpenCV.
 Detected activity is clipped and stored for postprocessing.
+## Sample Output
+![soho-c3-invers](sample.gif)
+
 
 ## Key Features:
 

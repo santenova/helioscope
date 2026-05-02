@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near Solar Activity Detection</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <h1>Satellite Real-time Downstreams</h1>
+    
+    <section  class="parent" style="border: #000">
+        
+        <!-- Left Column -->
+        <div  class="div2">
+            <div class="satellite-feeds">
+                <h2>SOHO Feeds</h2>
+                <img src="{{ url_for('menu_feed', name=1) }}" alt="C2 Feed" />
+                <br />
+                <img src="{{ url_for('menu_feed', name=2) }}" alt="C3 Feed"/>
+                <br />
+            </div>
+            
+            <div class="satellite-feeds">
+                <h2>SDO/AIA Feeds</h2>
+                <img src="{{ url_for('menu_feed', name=1) }}" alt="1600 Feed"/>
+                <br />
+                <img src="{{ url_for('menu_feed', name='2') }}" alt="1700 Feed"/>
+                <br />
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="div3"  style="border: 1px solid #999;">
+            <div class="video-container">
+                <h2><img src="{{ url_for('video_feed') }}" alt="Video Feed" class="lab"></h2>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="div4"  style="border: 1px solid #999;">
+            <div class="video-container">
+                {% for i in range(3) %}
+                    <img src="{{ url_for('clipps_feed', name=i)}}" alt="Video Feed {{ i + 1 }}" class="clipps">
+                {% endfor %}
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+</html>

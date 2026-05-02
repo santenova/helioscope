@@ -1,0 +1,12 @@
+ffmpeg-python
+numpy
+Pillow
+tensorflow-cpu
+distance
+requests
+tornado
+aiohttp
+opencv-python-headless
+imutils
+imagehash
+pytesseract                 
